@@ -55,3 +55,13 @@ print(string1.isnumeric())
 # etc!!!!!
 
 
+# Tuples > sequence of immutable objects, can't be changed (unlike lists), defined using parenthesis
+
+myTuple =("Python", 2.4, 6, "!")
+myTuple+=(1, 2, 3)
+print(myTuple)
+print(myTuple*3)
+print(myTuple[2:4])
+print(myTuple[4])
+
+
