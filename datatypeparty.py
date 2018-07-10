@@ -65,3 +65,18 @@ print(myTuple[2:4])
 print(myTuple[4])
 
 
+#  Lists > sequence o mutable objects, can be modified, defined with square braces like Arrays!
+
+myList = ["JavaScript", "Python", 3.1415, "coding is fun!"]
+
+# concatenation, repitition, slicing, and indexing are all done the same as tuples..
+# type specific methods for lists
+myList.append("Django!")
+print(myList)
+myList.extend(["this is", "another List"])
+print(myList)
+myList.insert(2, "Ruby is like Python?!")
+print(myList)
+myList.pop()
+print(myList)
+
