@@ -60,9 +60,20 @@ print("Bitwise OR", num4|num5)
 # returns 4
 print("Bitwise XOR", num4^num5)
 # shift left by x bits
-3 << 2 # =12 0011 becomes 1100
+print(3 << 2) # =12 0011 becomes 1100
 # shift right by x bits
-3 >>2 # =0 0011 becomes 0000
+print(3 >>2) # =0 0011 becomes 0000
 
+# Identity operators!
 
+x = 5
+print(x is 5) # true
+print(x is not 5) # false
+
+# Membership operators
+
+x = [1, 2, 3, 4, 5]
+
+print(3 in x) #true
+print(3 not in x) #false
 
