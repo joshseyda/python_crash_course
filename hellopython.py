@@ -48,5 +48,21 @@ print("X or Y", truValue or falValue)
 # returns the opposite of the variable
 print("not of X", not truValue)
 
+# Bitwise Operators, convert to bits then does operation
+
+num4 = 6 #110
+num5 = 2 #010
+
+# returns 2 because there are 2 0s?
+print("Bitwise AND", num4&num5)
+# returns 6 because there are 2 11s?
+print("Bitwise OR", num4|num5)
+# returns 4
+print("Bitwise XOR", num4^num5)
+# shift left by x bits
+3 << 2 # =12 0011 becomes 1100
+# shift right by x bits
+3 >>2 # =0 0011 becomes 0000
+
 
 
