@@ -54,4 +54,18 @@ for quant in range(99, 0, -1):
   print("take one down, pass it around", suffix)
   print("---")
 
-  
+#  breaks
+
+count = 0
+while True:
+  print(count)
+  count+=1
+  if(count > 10):
+    break
+
+
+for x in range(20):
+  if(x%2) == 0:
+    continue
+  print(x)
+    
