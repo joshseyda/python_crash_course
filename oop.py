@@ -19,6 +19,17 @@ class Employee:
   def apply_raise(self):
     self.pay = int(self.pay * self.raise_amount)  
 
+  @classmethod 
+  def set_raise_amount(cls, amount):
+    cls.raise_amount = amount
+  
+  @classmethod
+  # method to parse string formatted as "First-Last-Pay" to create new instances
+  def from_string(cls, emp_str):
+    first, last, pay = emp_str.split("-")
+    return cls(first, last, pay)
+      
+
 emp_1 = Employee("Josh","Sai",100000)
 emp_2 = Employee("Test","User",50000)
 
@@ -47,3 +58,16 @@ print(emp_2.__dict__)
 print("------")
 
 print(Employee.num_of_employees)
+# changes all employee raise amounts
+Employee.set_raise_amount(1.08)
+# check to see its effects...
+print(emp_1.raise_amount)
+print(emp_2.raise_amount)
+# still works to edit individual instances
+emp_1.raise_amount = 1.10
+print(emp_1.raise_amount)
+print(emp_2.raise_amount)
+
+emp_str_1 = "Aimee-Cesaire-120000"
+emp_3 = Employee.from_string(emp_str_1)
+print(emp_3.__dict__)
