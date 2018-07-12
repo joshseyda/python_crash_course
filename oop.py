@@ -1,4 +1,5 @@
 # Object Oriented Programming
+import datetime
 
 class Employee:
   # variable scoped to the class only
@@ -28,7 +29,15 @@ class Employee:
   def from_string(cls, emp_str):
     first, last, pay = emp_str.split("-")
     return cls(first, last, pay)
-      
+
+  # static methods are used for when you do not need to access the class or the instance itself to do the operation
+  @staticmethod
+  def is_workday(day):
+    if day.weekday() == 5 or day.weekday() == 6:
+      return False
+    return True
+
+ 
 
 emp_1 = Employee("Josh","Sai",100000)
 emp_2 = Employee("Test","User",50000)
@@ -71,3 +80,6 @@ print(emp_2.raise_amount)
 emp_str_1 = "Aimee-Cesaire-120000"
 emp_3 = Employee.from_string(emp_str_1)
 print(emp_3.__dict__)
+
+my_date = datetime.date(2018,2,16)
+print(Employee.is_workday(my_date))
