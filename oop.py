@@ -22,6 +22,10 @@ emp_2 = Employee("Test","User",50000)
 # class variable
 print(Employee.raise_amount)
 print(Employee.__dict__)
+
+# changes only emp_1 raise amount this defaults to class value, but can be anything
+emp_1.raise_amount = 1.10
+
 # instance properties 
 print(emp_1.full_name())
 print(emp_1.email)
