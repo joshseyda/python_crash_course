@@ -19,12 +19,21 @@ class Employee:
 emp_1 = Employee("Josh","Sai",100000)
 emp_2 = Employee("Test","User",50000)
 
+# class variable
 print(Employee.raise_amount)
+print(Employee.__dict__)
+# instance properties 
 print(emp_1.full_name())
 print(emp_1.email)
+# instance access of class variable
 print(emp_1.raise_amount)
+# instance's properties as a dictionary
+print(emp_1.__dict__)
+
 print("------")
+
 print(emp_2.full_name())
 print(emp_2.email)
 print(emp_2.raise_amount)
+print(emp_2.__dict__)
 
