@@ -1,7 +1,9 @@
 # Object Oriented Programming
 
 class Employee:
-
+  # variable scoped to the class only
+  num_of_employees = 0
+  # variable scoped to the class but open to change on the instance
   raise_amount = 1.04
 
   def __init__(self, first, last, pay):
@@ -9,6 +11,7 @@ class Employee:
     self.last = last
     self.email = first + "." + last + "@email.com"
     self.pay = pay
+    Employee.num_of_employees+=1
 
   def full_name(self):
     return '{} {}'.format(self.first, self.last)
@@ -41,3 +44,6 @@ print(emp_2.email)
 print(emp_2.raise_amount)
 print(emp_2.__dict__)
 
+print("------")
+
+print(Employee.num_of_employees)
