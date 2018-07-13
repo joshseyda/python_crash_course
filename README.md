@@ -9,4 +9,7 @@ print("Hello Fam!")
 #### An ongoing Resource list of tutorials I am using
 
 [learnxinyminutes](https://learnxinyminutes.com/docs/python3/)
+
 [Edureka](https://www.youtube.com/watch?v=N0lxfilGfak)
+
+[Corey Schaefer](https://www.youtube.com/watch?v=ZDa-Z5JzLYM&list=PL-osiE80TeTsqhIuOqKhwlXsIBIdSeYtc)

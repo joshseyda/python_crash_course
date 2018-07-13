@@ -37,49 +37,79 @@ class Employee:
       return False
     return True
 
- 
+# creating subclasses
+class Developer(Employee):
+  raise_amount = 1.10
+
+  def __init__(self, first, last, pay, prog_lang):
+    super().__init__(first,last,pay)
+    self.prog_lang = prog_lang
+
+class Manager(Employee):
+
+  def __init__(self, first, last, pay, employees=None):
+    super().__init__(first,last,pay)
+    if employeesis None:
+      self.employees = []
+    else:
+      self.employees = employees
+
+  def add_employee(self, emp):
+    if emp not in self.employees:
+      self.employees.append(emp)
+
+  def remove_employee(self, emp):
+    if emp in self.employees:
+      self.employees.remove(emp)
+  
+  def print_emps(self):
+    
+
 
 emp_1 = Employee("Josh","Sai",100000)
 emp_2 = Employee("Test","User",50000)
+dev_1 = Developer("Linus", "Torvalds", 120000, "C")
+print(dev_1.__dict__)
 
-# class variable
-print(Employee.raise_amount)
-print(Employee.__dict__)
+# print(help(Developer)) # this gives you a bunch of useful info!
+# # class variable
+# print(Employee.raise_amount)
+# print(Employee.__dict__)
 
-# changes only emp_1 raise amount this defaults to class value, but can be anything
-emp_1.raise_amount = 1.10
+# # changes only emp_1 raise amount this defaults to class value, but can be anything
+# emp_1.raise_amount = 1.10
 
-# instance properties 
-print(emp_1.full_name())
-print(emp_1.email)
-# instance access of class variable
-print(emp_1.raise_amount)
-# instance's properties as a dictionary
-print(emp_1.__dict__)
+# # instance properties 
+# print(emp_1.full_name())
+# print(emp_1.email)
+# # instance access of class variable
+# print(emp_1.raise_amount)
+# # instance's properties as a dictionary
+# print(emp_1.__dict__)
 
-print("------")
+# print("------")
 
-print(emp_2.full_name())
-print(emp_2.email)
-print(emp_2.raise_amount)
-print(emp_2.__dict__)
+# print(emp_2.full_name())
+# print(emp_2.email)
+# print(emp_2.raise_amount)
+# print(emp_2.__dict__)
 
-print("------")
+# print("------")
 
-print(Employee.num_of_employees)
-# changes all employee raise amounts
-Employee.set_raise_amount(1.08)
-# check to see its effects...
-print(emp_1.raise_amount)
-print(emp_2.raise_amount)
-# still works to edit individual instances
-emp_1.raise_amount = 1.10
-print(emp_1.raise_amount)
-print(emp_2.raise_amount)
+# print(Employee.num_of_employees)
+# # changes all employee raise amounts
+# Employee.set_raise_amount(1.08)
+# # check to see its effects...
+# print(emp_1.raise_amount)
+# print(emp_2.raise_amount)
+# # still works to edit individual instances
+# emp_1.raise_amount = 1.10
+# print(emp_1.raise_amount)
+# print(emp_2.raise_amount)
 
-emp_str_1 = "Aimee-Cesaire-120000"
-emp_3 = Employee.from_string(emp_str_1)
-print(emp_3.__dict__)
+# emp_str_1 = "Aimee-Cesaire-120000"
+# emp_3 = Employee.from_string(emp_str_1)
+# print(emp_3.__dict__)
 
-my_date = datetime.date(2018,2,16)
-print(Employee.is_workday(my_date))
+# my_date = datetime.date(2018,2,16)
+# print(Employee.is_workday(my_date))
