@@ -4,4 +4,4 @@ kms = input()
 miles = float(kms)/1.60934
 # round(thing to round, how many decimal points)
 distance = round(miles, 2)
-print(f"Ok, you ran {distance} miles")
+print(f"Ok, you ran {kms} kilometers, or {distance} miles")
